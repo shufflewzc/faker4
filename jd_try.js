@@ -357,7 +357,7 @@ async function try_apply(title, activityId) {
       },
       'x-api-eid-token': $.jsToken,
     },
-    '20241024102328979;8v5eeh5lr1zk9er9;35fa0;tk03wc6231d3518nxa5SNv1G7xPveQBQ9ProecNhsUiJqMLXoJGTFmWAznDJpubNLB1gVxvi5YhTz3sB8_Xe8zgWthHs;280cd4752f7e2ee5a1e0cb41b512dff3;4.9;1729736608979;pjbMhjZd5WVdACUf56VeDWVS2TkdJrJdJrESJrpjh7Jj1jFfFmVd2XVf2HofIeYTImFf1rYdFq4eHeld4LoS6nFjLDIj7SnQEiVS0ipjLDrgJjIe4rIe7TYT5P4fJWod5T1TJiVd6nFS0nlSzjle6fFeJrJdJfUT1yVTIipjLDrgJnIgyzpe1uWS-GFSMWoRJrJdJTEjLrJp-jJO6XYZ0u1X-mYXjSEjLDIj_ulS9mFPJrpjh7JjGy1QDqWRJrJdJTlPJrpjh7ZMLrJp7rJdJLYOJipjLrpjh7JjJrJdJPYOJipjLrpjh7Jf5rJdJTYOJipjLrpjh7pfLDIj2XETJrpjLrJp-rojxjpe2iFjLrpjLDrg4Lojxj5f2iFjLrpjLDrg63pjxjJf2iFjLrpjLDrgJXIg6zpfMWlOC6FjLDIj6XETJrpjLrJp-rojxj5R0ipjLrpjh7pfLDIj46FjLrpjLDrg7rJdJ7FjLrpjLDrg7rJdJb1OJrpjLrJpwqJdJbFQGakNGipjLDrguqpjhjJhBDJhBDJjLDIj6rEjLrpjLD7NLDIj7qEjLrJp-jpVLf2YLfVTeqZSAGlQLT4U4nojYunjGy1QDqWRLXmXoq5dGy1QDqWRJrJdJnVO4ipjLD7N;c438f3c4dfb2e0b3d7d3c8a8ae4046b4',
+    '35fa0',
   );
 
   setBaseCookie();
@@ -605,7 +605,7 @@ async function try_feedsList(tabId, page) {
       },
       'x-api-eid-token': $.jsToken,
     },
-    '20241024102328979;8v5eeh5lr1zk9er9;35fa0;tk03wc6231d3518nxa5SNv1G7xPveQBQ9ProecNhsUiJqMLXoJGTFmWAznDJpubNLB1gVxvi5YhTz3sB8_Xe8zgWthHs;280cd4752f7e2ee5a1e0cb41b512dff3;4.9;1729736608979;pjbMhjZd5WVdACUf56VeDWVS2TkdJrJdJrESJrpjh7Jj1jFfFmVd2XVf2HofIeYTImFf1rYdFq4eHeld4LoS6nFjLDIj7SnQEiVS0ipjLDrgJjIe4rIe7TYT5P4fJWod5T1TJiVd6nFS0nlSzjle6fFeJrJdJfUT1yVTIipjLDrgJnIgyzpe1uWS-GFSMWoRJrJdJTEjLrJp-jJO6XYZ0u1X-mYXjSEjLDIj_ulS9mFPJrpjh7JjGy1QDqWRJrJdJTlPJrpjh7ZMLrJp7rJdJLYOJipjLrpjh7JjJrJdJPYOJipjLrpjh7Jf5rJdJTYOJipjLrpjh7pfLDIj2XETJrpjLrJp-rojxjpe2iFjLrpjLDrg4Lojxj5f2iFjLrpjLDrg63pjxjJf2iFjLrpjLDrgJXIg6zpfMWlOC6FjLDIj6XETJrpjLrJp-rojxj5R0ipjLrpjh7pfLDIj46FjLrpjLDrg7rJdJ7FjLrpjLDrg7rJdJb1OJrpjLrJpwqJdJbFQGakNGipjLDrguqpjhjJhBDJhBDJjLDIj6rEjLrpjLD7NLDIj7qEjLrJp-jpVLf2YLfVTeqZSAGlQLT4U4nojYunjGy1QDqWRLXmXoq5dGy1QDqWRJrJdJnVO4ipjLD7N;c438f3c4dfb2e0b3d7d3c8a8ae4046b4',
+    '35fa0',
   );
 
   try {
@@ -730,7 +730,7 @@ async function try_feedsList(tabId, page) {
   }
 }
 
-async function h5stSign(body, h5st, version = '4.9.1') {
+async function h5stSign(body, appId, version = '4.9.4') {
   const options = {
     method: 'POST',
     url: `${args_xh.h5st_server}/h5st`,
@@ -740,7 +740,7 @@ async function h5stSign(body, h5st, version = '4.9.1') {
       pin: $.UserName,
       ua: $.userAgent,
       body,
-      h5st,
+      appId,
     },
   };
   const { data } = await axios.request(options);
