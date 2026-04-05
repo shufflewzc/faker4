@@ -75,7 +75,7 @@ declare -A target_deps=(
  ["cheerio"]="1.0.0"
  ["tunnel"]="latest"
  ["https-proxy-agent"]="7.0.5"
- ["sharp"]="0.33.3"
+ ["sharp"]="0.32.0"
  ["qs"]="6.11.0"
 )
 
